@@ -9,8 +9,8 @@
 - [x] Create AGENTS.md
 - [x] Create PLANNING.md
 - [x] Create TASKS.md
-- [ ] Complete CATWOE analysis
-- [ ] Write the Root Definition
+- [x] Complete CATWOE analysis
+- [x] Write the Root Definition
 - [ ] Write User Stories
 - [ ] Design User Journeys
 
