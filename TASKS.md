@@ -13,6 +13,7 @@
 - [x] Write the Root Definition
 - [x] Write User Stories
 - [x] Design User Journeys
+- [x] Document the architecture and technology stack
 
 ## Phase 2: Project setup
 
