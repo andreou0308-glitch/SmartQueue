@@ -11,8 +11,8 @@
 - [x] Create TASKS.md
 - [x] Complete CATWOE analysis
 - [x] Write the Root Definition
-- [ ] Write User Stories
-- [ ] Design User Journeys
+- [x] Write User Stories
+- [x] Design User Journeys
 
 ## Phase 2: Project setup
 
