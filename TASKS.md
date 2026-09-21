@@ -17,10 +17,10 @@
 
 ## Phase 2: Project setup
 
-- [ ] Create the backend project
+- [x] Create the backend project
 - [ ] Create the frontend project
 - [ ] Configure environment variables
-- [ ] Define the initial folder structure
+- [x] Define the initial folder structure
 - [ ] Create the PostgreSQL database
 
 ## Phase 3: Backend development
