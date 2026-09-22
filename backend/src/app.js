@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const pool = require("./config/database");
 
 const app = express();
 
@@ -11,6 +12,24 @@ app.get("/api/health", (request, response) => {
         status: "success",
         message: "SmartQueue API is running"
     });
+});
+app.get("/api/health/database", async (request, response) => {
+    try {
+        const result = await pool.query(
+            "SELECT CURRENT_DATABASE() AS database_name"
+        );
+
+        response.status(200).json({
+            status: "success",
+            message: "Database connection is working",
+            database: result.rows[0].database_name
+        });
+    } catch (error) {
+        response.status(500).json({
+            status: "error",
+            message: "Database connection failed"
+        });
+    }
 });
 
 app.use((request, response) => {
