@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const pool = require("./config/database");
+const serviceRoutes = require("./routes/serviceRoutes");
 
 const app = express();
 
@@ -31,11 +32,20 @@ app.get("/api/health/database", async (request, response) => {
         });
     }
 });
+app.use("/api/services", serviceRoutes);
 
 app.use((request, response) => {
     response.status(404).json({
         status: "error",
         message: "Route not found"
+    });
+});
+app.use((error, request, response, next) => {
+    console.error("Unhandled error:", error.message);
+
+    response.status(500).json({
+        status: "error",
+        message: "Internal server error"
     });
 });
 
