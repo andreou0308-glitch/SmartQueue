@@ -3,13 +3,14 @@ const cors = require("cors");
 const pool = require("./config/database");
 const serviceRoutes = require("./routes/serviceRoutes");
 const ticketRoutes = require("./routes/ticketRoutes");
-
+const queueRoutes = require("./routes/queueRoutes");
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 app.use("/api/services", serviceRoutes);
 app.use("/api/tickets", ticketRoutes);
+app.use("/api/queue", queueRoutes);
 
 app.get("/api/health", (request, response) => {
     response.status(200).json({
